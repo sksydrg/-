@@ -1,0 +1,1 @@
+The ConsoleCanvas is used for render  output like logcat. Also a plugin for direct use in debug.
