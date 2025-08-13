@@ -125,7 +125,8 @@ public class BasicRender
 				canvas.scale(zoom,zoom);
 
 				while (columnAt < columnSize) {
-				draw_y += size;	canvas.drawText(String.valueOf(num),x,draw_y + 2,paint);
+				    draw_y += size;
+					canvas.drawText(String.valueOf(num),x,draw_y + 2,paint);
 
 					int hasRenderDrawableHeight = isRenderDrawable(canvas,draw_x,draw_y,num,preview,false);
 					if (hasRenderDrawableHeight != 0) {
