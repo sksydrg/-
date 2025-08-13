@@ -37,7 +37,7 @@ public class BasicRender
 		dp = displayMetrics.density;
 		
 		renderView = new RelativeLayout(acv) {
-			int x = 20, y = 20;
+			int x = 20, y = 2;
 			Paint paint = new Paint();
 
 			{
@@ -125,7 +125,7 @@ public class BasicRender
 				canvas.scale(zoom,zoom);
 
 				while (columnAt < columnSize) {
-					canvas.drawText(String.valueOf(num),x,draw_y + 2,paint);
+				draw_y += size;	canvas.drawText(String.valueOf(num),x,draw_y + 2,paint);
 
 					int hasRenderDrawableHeight = isRenderDrawable(canvas,draw_x,draw_y,num,preview,false);
 					if (hasRenderDrawableHeight != 0) {
@@ -133,7 +133,6 @@ public class BasicRender
 						preview = prepared.hasNext() ? prepared.next() : null;
 					} else {
 						canvas.drawText(columns[columnAt],draw_x,draw_y,paint);
-						draw_y += size;
 						columnAt++;
 					}
 					num++;
